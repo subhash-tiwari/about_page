@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+/* AnimatedUpDownBackground.css */
+
+.animated-updown-background {
+  position: relative;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1570641963303-92ce4845ed4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bW91bnRhaW5zfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60');
+  animation: moveUpDown ease-in-out infinite;
+  background-size:cover;
+  position: absolute;
+  opacity:inherit ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*.animated-updown-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('https://images.unsplash.com/photo-1542224566-6e85f2e6772f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vdW50YWluc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+  background-size: cover;
+  background-position: center;
+  animation: moveUpDown 6s ease-in-out infinite;
+  z-index: -1;
+}*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10%);
   }
 }
